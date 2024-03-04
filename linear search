@@ -1,0 +1,29 @@
+#include<stdio.h>
+ int main()
+ {
+     int i, n,pos,flag=0,key,a[5];
+     printf("enter a n");
+     scanf("%d",&n);
+     
+     printf("enter the elements in an array");
+     for(i=0;i<n;i++)
+      scanf("%d",&a[i]);
+      
+     printf("enter a key value");
+     scanf("%d",&key);
+     
+     for(i=0;i<n;i++)
+    {
+         if(a[i]==key)
+         {
+             flag=1;
+             pos=i;
+             break;
+         }
+     }
+     if(flag==1)
+     printf("the key elements is found at the position is %d",pos);
+     else
+     printf("the key element is not found");
+     return 0;
+ }
