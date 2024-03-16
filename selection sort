@@ -1,0 +1,22 @@
+#include<stdio.h>
+ int main()
+ {
+     int min,t,i,j;
+   int A[]={88,55,22,44,77,33,66};
+   int n=7;
+   for(i=0;i<n;i++)
+   {
+       min=i;
+       for(j=i+1;j<n;j++)
+       {
+           if(A[j]<A[min])
+           min=j;
+       }
+       t=A[min];
+       A[min]=A[i];
+       A[i]=t;
+   }
+   for(i=0;i<n;i++)
+   printf("%d\n",A[i]);
+   return 0;
+ }
